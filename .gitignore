@@ -34,3 +34,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+/Assets/Original ORCA Assets/SunTemple_v3/Textures/Thumbs.db
+/Assets/Original ORCA Assets/SunTemple_v3/Textures/Thumbs.db.meta
