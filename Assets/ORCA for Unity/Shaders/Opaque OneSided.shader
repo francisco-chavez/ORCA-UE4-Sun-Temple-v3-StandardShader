@@ -17,7 +17,7 @@
 
 		CGPROGRAM
 
-		#pragma surface surf Standard fullforwardshadows alphatest:_ClipValue
+		#pragma surface surf Standard fullforwardshadows alphatest:_ClipValue addshadow
 		#pragma target 5.0
 
 		uniform sampler2D	_MainTex;
@@ -39,7 +39,7 @@
 
 		void surf (Input IN, inout SurfaceOutputStandard o) 
 		{
-			fixed4 c	= tex2D (_MainTex, IN.uv_MainTex) * _Color;
+			fixed4 c	= tex2D(_MainTex, IN.uv_MainTex) * _Color;
 			o.Albedo	= c.rgb + (UNITY_LIGHTMODEL_AMBIENT * _Color).rgb;
 			o.Alpha		= c.a;
 

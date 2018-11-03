@@ -18,7 +18,7 @@
 		Cull Off
 
 		CGPROGRAM
-		#pragma surface surf Standard fullforwardshadows alphatest:_ClipValue
+		#pragma surface surf Standard fullforwardshadows alphatest:_ClipValue addshadow
 
 		#pragma target 5.0
 
