@@ -1,10 +1,9 @@
 * text=auto
 
 # Unity files
-*LightingData.asset filter=lfs diff=lfs merge=lfs -text
 *.meta -text merge=unityamlmerge diff
 *.unity -text merge=unityamlmerge diff
-*.asset -text merge=unityamlmerge diff
+*.asset filter=lfs diff=lfs merge=lfs -text
 *.prefab -text merge=unityamlmerge diff
 
 
