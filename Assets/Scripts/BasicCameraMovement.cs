@@ -14,6 +14,7 @@ public class BasicCameraMovement
 
 	private Vector3 _previousPosDelta	= Vector3.zero;
 	
+
 	void Update ()
 	{
 		var forwardMult = Input.GetAxis("Vertical");
@@ -35,7 +36,7 @@ public class BasicCameraMovement
 			if (baseDelta.sqrMagnitude > 1.0f)
 				baseDelta.Normalize();
 
-			posDelta = Quaternion.Lerp(Quaternion.identity, rotDelta, 0.5f) * (Time.deltaTime * MaxMovementSpeed * baseDelta);
+			posDelta = Quaternion.Slerp(Quaternion.identity, rotDelta, 0.5f) * (Time.deltaTime * MaxMovementSpeed * baseDelta);
 		}
 
 		transform.position += Vector3.Lerp(posDelta, _previousPosDelta, 0.5f);
